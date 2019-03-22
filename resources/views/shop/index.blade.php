@@ -17,7 +17,7 @@
             <div class="clearfix">
               <div class="pull-left price">${{ $product->price }}</div>
             </div>
-              <a href="#" class="btn btn-primary">Add to Cart</a>
+              <a href="/add-to-cart/{{ $product->id }}" class="btn btn-primary">Add to Cart</a>
             </div>
         </div>
       </div>

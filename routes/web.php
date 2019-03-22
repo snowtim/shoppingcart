@@ -18,6 +18,7 @@ Route::get('/welcome', function() {
 
 //product 
 Route::get('/', 'ProductController@index');
+Route::get('/add-to-cart/{id}', 'ProductController@getAddToCart');
 
 //about user login and register
 Auth::routes();
