@@ -27,4 +27,27 @@ class ProductController extends Controller
 		//dd($request->session()->get('cart'));
 		return redirect('/');
 	}
+
+	protected function shoppingcart() {
+		if(!Session::has('cart')) {
+			return view('shop.shoppingcart', ['products' => null]);
+		}
+		$oldCart = Session::get('cart');
+		$cart = new Cart($oldCart);
+		return view('shop.shoppingcart', ['products' => $cart->items, 'totalPrice' => $cart->totalPrice]);
+	}
+
+	protected function pay() {
+		if(!Session::has('cart')) {
+			return view('shop.shoppingcart');
+		}
+		$oldCart = Session::get('cart');
+		$cart = new Cart($oldCart);
+		$total = $cart->totalPrice;
+		return view('shop.pay', ['total' => $total]);
+	}
+
+	protected function paypost() {
+		
+	}
 }

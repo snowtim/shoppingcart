@@ -19,6 +19,9 @@ Route::get('/welcome', function() {
 //product 
 Route::get('/', 'ProductController@index');
 Route::get('/add-to-cart/{id}', 'ProductController@getAddToCart');
+Route::get('/shopping-cart', 'ProductController@shoppingcart');
+Route::get('/pay', 'ProductController@pay');
+Route::post('/pay', 'ProductController@paypost');
 
 //about user login and register
 Auth::routes();

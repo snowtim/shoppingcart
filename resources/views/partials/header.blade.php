@@ -18,7 +18,9 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i> Shopping Cart</a>
+        <a class="nav-link" href="/shopping-cart"><i class="fas fa-shopping-cart"></i> Shopping Cart
+        <span class="badge">{{ Session::has('cart') ? Session::get('cart')->totalQty : '' }}</span>
+        </a>
       </li>
 
       <li class="nav-item dropdown">
