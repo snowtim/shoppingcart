@@ -20,8 +20,8 @@ class ProductTableSeeder extends Seeder
         $product->save();
 
         $product = new \App\Product([
-        	'imagePath' => 'https://media1.tenor.com/images/2231e709cb83d7893227b8c9d88db195/tenor.gif?itemid=10623420',
-        	'title' => 'Sana',
+        	'imagePath' => 'https://img.purch.com/h/1000/aHR0cDovL3d3dy5saXZlc2NpZW5jZS5jb20vaW1hZ2VzL2kvMDAwLzEwNC8yODIvb3JpZ2luYWwvcGVuZ3Vpbi1jaGljay1mZWV0LmpwZw==',
+        	'title' => 'Peguin',
         	'description' => 'Cute',
         	'price' => 90
         ]);
